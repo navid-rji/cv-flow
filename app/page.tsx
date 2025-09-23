@@ -69,7 +69,7 @@ export default function Home() {
       <Header />
       <main className="relative">
         {/* Hero Section */}
-        <section className="relative min-h-[80vh] flex items-center px-16 pt-8">
+        <section className="relative min-h-[80vh] flex items-center px-8 md:px-16 pt-8">
           <Particles
             className="absolute inset-0 z-0"
             quantity={75}
@@ -233,14 +233,14 @@ export default function Home() {
             </div> */}
           </div>
           <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center mt-46">
-            <div className="space-y-4">
+            <div className="space-y-4 text-center flex flex-col items-center md:items-start md:text-left md:justify-baseline">
               <h2 className="text-white text-4xl md:text-5xl font-extrabold tracking-tight">
-                Your next role starts with a sharp CV
+                Your next role starts with a sharp CV.
               </h2>
               <p className="text-gray-300 text-lg">
                 Create, refine, and export—without distractions or paywalls.
               </p>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-col sm:flex-row gap-4">
                 <Button
                   variant="secondary"
                   size="lg"
@@ -248,13 +248,13 @@ export default function Home() {
                 >
                   Create my CV now
                 </Button>
-                <Button
+                {/* <Button
                   variant="outline"
                   size="lg"
                   className="rounded-full px-8 bg-transparent border-background/40 text-background"
                 >
                   Explore the template
-                </Button>
+                </Button> */}
               </div>
             </div>
             <div>
