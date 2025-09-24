@@ -31,10 +31,10 @@ export default function Home() {
       q: "How many templates are there?",
       a: "Right now there’s one carefully-designed template that works for most roles. We’ll add more over time—still free.",
     },
-    {
-      q: "Is the template ATS-friendly?",
-      a: "Yes. The layout and structure are designed to parse well while staying human-readable.",
-    },
+    // {
+    //   q: "Is the template ATS-friendly?",
+    //   a: "Yes. The layout and structure are designed to parse well while staying human-readable.",
+    // },
     {
       q: "Do I need an account to export?",
       a: "No. You can build and export a PDF without creating an account.",
@@ -153,14 +153,6 @@ export default function Home() {
                 title="Effortless editing"
                 description="Inline fields, smart spacing, and instant preview keep you in flow."
               />
-              {/* <FeatureCard
-                area="md:[grid-area:1/7/2/13] xl:[grid-area:2/1/3/5]"
-                icon={
-                  <LayoutTemplate className="h-4 w-4 text-black dark:text-neutral-400" />
-                }
-                title="Clean template"
-                description="One template, carefully tuned for readability and ATS parsing."
-              /> */}
               <FeatureCard
                 area="md:[grid-area:1/7/2/13] xl:[grid-area:2/1/3/5]"
                 icon={
@@ -274,7 +266,7 @@ export default function Home() {
           <ScrollSection className="py-24 bg-background" roundedTop>
             <Section className="grid md:grid-cols-2 gap-12 md:gap-16">
               {/* Left column: title + CTA */}
-              <div className="flex flex-col w-full justify-center md:justify-start">
+              <div className="flex flex-col w-full items-center justify-center md:justify-start md:items-start">
                 <div className="mb-6 text-center md:text-start">
                   <h2 className="text-black text-4xl md:text-5xl font-bold text-balance tracking-tight mb-6">
                     Frequently asked questions.
@@ -284,7 +276,7 @@ export default function Home() {
                   </p>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-4">
+                <div className="flex max-w-sm flex-col justify-center md:flex-row md:justify-start gap-4">
                   <Button size="lg" className="rounded-full px-8">
                     Start for free
                   </Button>
@@ -307,107 +299,8 @@ export default function Home() {
                 </Accordion>
               </div>
             </Section>
-
-            {/* <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-              <div className="space-y-4">
-                <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight">
-                  Your next role starts with a sharp CV
-                </h2>
-                <p className="text-lg opacity-90">
-                  Create, refine, and export—without distractions or paywalls.
-                </p>
-                <div className="flex flex-wrap gap-4">
-                  <Button
-                    variant="secondary"
-                    size="lg"
-                    className="rounded-full px-8"
-                  >
-                    Create my CV now
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    className="rounded-full px-8 bg-transparent border-background/40 text-background"
-                  >
-                    Explore the template
-                  </Button>
-                </div>
-              </div>
-              <div>
-                <div className="aspect-[4/3] rounded-2xl bg-background/10 border border-background/20 grid place-items-center">
-                  <div className="text-center px-8">
-                    <h3 className="text-xl font-semibold">
-                      Live editor preview
-                    </h3>
-                    <p className="mt-2 opacity-80 max-w-sm">
-                      Replace this with a GIF or screenshot of the editing flow.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div> */}
           </ScrollSection>
         </div>
-
-        {/* Final CTA */}
-        {/* <ScrollSection
-          className="py-24 px-6 bg-foreground text-background"
-          roundedTop
-        >
-          <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-4">
-              <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight">
-                Your next role starts with a sharp CV
-              </h2>
-              <p className="text-lg opacity-90">
-                Create, refine, and export—without distractions or paywalls.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Button
-                  variant="secondary"
-                  size="lg"
-                  className="rounded-full px-8"
-                >
-                  Create my CV now
-                </Button>
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="rounded-full px-8 bg-transparent border-background/40 text-background"
-                >
-                  Explore the template
-                </Button>
-              </div>
-            </div>
-            <div>
-              <div className="aspect-[4/3] rounded-2xl bg-background/10 border border-background/20 grid place-items-center">
-                <div className="text-center px-8">
-                  <h3 className="text-xl font-semibold">Live editor preview</h3>
-                  <p className="mt-2 opacity-80 max-w-sm">
-                    Replace this with a GIF or screenshot of the editing flow.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </ScrollSection> */}
-
-        <footer className="px-6 py-12 text-sm text-muted-foreground">
-          <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p>© {new Date().getFullYear()} CVflow. Free forever.</p>
-            <div className="flex items-center gap-6">
-              <a href="#" className="hover:underline">
-                Privacy
-              </a>
-              <a href="#" className="hover:underline">
-                Terms
-              </a>
-              <a href="#" className="hover:underline">
-                Contact
-              </a>
-            </div>
-          </div>
-        </footer>
       </main>
     </div>
   );
@@ -440,10 +333,10 @@ function FeatureCard({
               {icon}
             </div>
             <div className="space-y-3">
-              <h3 className="-tracking-4 pt-0.5 font-sans text-xl/[1.375rem] font-semibold text-balance text-black md:text-2xl/[1.875rem] dark:text-white">
+              <h3 className="-tracking-4 pt-0.5 text-xl/[1.375rem] font-semibold text-balance text-black md:text-2xl/[1.875rem] dark:text-white">
                 {title}
               </h3>
-              <h2 className="font-sans text-sm/[1.125rem] text-black md:text-base/[1.375rem] dark:text-neutral-400 [&_b]:md:font-semibold [&_strong]:md:font-semibold">
+              <h2 className="text-sm/[1.125rem] text-black md:text-base/[1.375rem] dark:text-neutral-400 [&_b]:md:font-semibold [&_strong]:md:font-semibold">
                 {description}
               </h2>
             </div>
@@ -482,10 +375,10 @@ function StepCard({
               {step}
             </p>
             <div className="space-y-3">
-              <h3 className="-tracking-4 pt-0.5 font-sans text-xl/[1.375rem] font-semibold text-balance text-black md:text-2xl/[1.875rem] dark:text-white">
+              <h3 className="-tracking-4 pt-0.5 text-xl/[1.375rem] font-semibold text-balance text-black md:text-2xl/[1.875rem] dark:text-white">
                 {title}
               </h3>
-              <h2 className="font-sans text-sm/[1.125rem] text-black md:text-base/[1.375rem] dark:text-neutral-400 [&_b]:md:font-semibold [&_strong]:md:font-semibold">
+              <h2 className="text-sm/[1.125rem] text-black md:text-base/[1.375rem] dark:text-neutral-400 [&_b]:md:font-semibold [&_strong]:md:font-semibold">
                 {desc}
               </h2>
             </div>

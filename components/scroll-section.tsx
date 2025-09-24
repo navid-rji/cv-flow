@@ -20,9 +20,9 @@ export function ScrollSection({
   children,
   className = "",
   roundedTop = false,
-  initialScale = 0.90,
+  initialScale = 0.9,
   maxScale = 1,
-  zoneFraction = 0.4,
+  zoneFraction = 0.3,
 }: ScrollSectionProps) {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(initialScale);
@@ -81,11 +81,11 @@ export function ScrollSection({
     <div
       ref={sectionRef}
       className={cn(
-        "ransition-transform ease-out will-change-transform origin-center",
+        " will-change-transform origin-top",
         roundedTop && "rounded-t-[3rem]",
         className
       )}
-      style={{ transform: `scaleX(${scale})` }}
+      style={{ transform: `scale(${scale})` }}
     >
       {children}
     </div>
