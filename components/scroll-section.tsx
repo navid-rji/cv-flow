@@ -2,6 +2,7 @@
 
 import type React from "react";
 import { useEffect, useRef, useState } from "react";
+import { cn } from "@/lib/utils";
 
 interface ScrollSectionProps {
   children: React.ReactNode;
@@ -19,9 +20,9 @@ export function ScrollSection({
   children,
   className = "",
   roundedTop = false,
-  initialScale = 0.95,
+  initialScale = 0.90,
   maxScale = 1,
-  zoneFraction = 0.3,
+  zoneFraction = 0.4,
 }: ScrollSectionProps) {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(initialScale);
@@ -79,9 +80,11 @@ export function ScrollSection({
   return (
     <div
       ref={sectionRef}
-      className={`transition-transform duration-150 ease-out will-change-transform origin-center ${
-        roundedTop ? "rounded-t-[3rem]" : ""
-      } ${className}`}
+      className={cn(
+        "ransition-transform ease-out will-change-transform origin-center",
+        roundedTop && "rounded-t-[3rem]",
+        className
+      )}
       style={{ transform: `scaleX(${scale})` }}
     >
       {children}

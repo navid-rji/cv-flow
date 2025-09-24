@@ -1,5 +1,6 @@
 import React from "react";
 import { Header } from "@/components/header";
+import { Section } from "@/components/section";
 import { ScrollSection } from "@/components/scroll-section";
 import { Button } from "@/components/ui/button";
 import {
@@ -60,7 +61,7 @@ export default function Home() {
     },
     {
       q: "Is my data saved online?",
-      a: "Your CV content stays local in your browser. No sign‑up required, no cloud lock‑in.",
+      a: "Your CV content stays local in your browser. No sign-up required, no cloud lock-in.",
     },
   ];
 
@@ -69,7 +70,7 @@ export default function Home() {
       <Header />
       <main className="relative">
         {/* Hero Section */}
-        <section className="relative min-h-[80vh] flex items-center px-8 md:px-16 pt-8">
+        <Section className="relative min-h-[80vh] flex items-center pt-8">
           <Particles
             className="absolute inset-0 z-0"
             quantity={75}
@@ -78,62 +79,58 @@ export default function Home() {
             color={"#000000"}
             refresh
           />
-          <div className="max-w-7xl mx-auto w-full">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="space-y-8">
-                <h1 className="text-7xl lg:text-8xl xl:text-9xl font-black text-foreground leading-[0.9] text-balance uppercase">
-                  CREATE YOUR PERFECT CV
-                </h1>
-                <p className="text-lg text-gray-600 max-w-lg leading-relaxed">
-                  CVflow is a fast, focused CV builder. Simply add your
-                  experience and export a polished CV — free today, free
-                  forever. No trials, no paywalls, no watermarks.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button
-                    size="lg"
-                    className="bg-black text-white hover:bg-gray-800 rounded-full px-8"
-                  >
-                    Start Creating
-                  </Button>
-                  {/* <Button
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <h1 className="text-7xl lg:text-8xl xl:text-9xl font-black text-foreground leading-[0.9] text-balance uppercase">
+                CREATE YOUR PERFECT CV
+              </h1>
+              <p className="text-lg text-gray-600 max-w-lg leading-relaxed">
+                CVflow is a fast, focused CV builder. Simply add your experience
+                and export a polished CV — free today, free forever. No trials,
+                no paywalls, no watermarks.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button
+                  size="lg"
+                  className="bg-black text-white hover:bg-gray-800 rounded-full px-8"
+                >
+                  Start Creating
+                </Button>
+                {/* <Button
                     variant="outline"
                     size="lg"
                     className="rounded-full px-8 bg-transparent"
                   >
                     View Templates
                   </Button> */}
-                </div>
               </div>
-              {/* Hero mockup placeholder */}
-              <div className="relative">
-                <div className="aspect-[4/3] rounded-2xl border bg-muted/30 grid place-items-center">
-                  <div className="text-center p-8">
-                    <span className="inline-flex items-center gap-2 text-sm uppercase tracking-wider">
-                      <Sparkles className="h-4 w-4" /> Live Preview
-                    </span>
-                    <h3 className="mt-2 text-2xl font-semibold">
-                      Template Showcase
-                    </h3>
-                    <p className="mt-2 text-muted-foreground max-w-sm mx-auto">
-                      Drop a product screenshot here later. For now, this
-                      placeholder highlights where your CV preview will live.
-                    </p>
-                  </div>
+            </div>
+            {/* Hero mockup placeholder */}
+            <div className="relative">
+              <div className="aspect-[4/3] rounded-2xl border bg-muted/30 grid place-items-center">
+                <div className="text-center p-8">
+                  <span className="inline-flex items-center gap-2 text-sm uppercase tracking-wider">
+                    <Sparkles className="h-4 w-4" /> Live Preview
+                  </span>
+                  <h3 className="mt-2 text-2xl font-semibold">
+                    Template Showcase
+                  </h3>
+                  <p className="mt-2 text-muted-foreground max-w-sm mx-auto">
+                    Drop a product screenshot here later. For now, this
+                    placeholder highlights where your CV preview will live.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
-        </section>
+        </Section>
         {/* Comfortable gap between hero and the next section */}
         <div className="mt-16 md:mt-24" />
 
         {/* Value Props */}
-        <ScrollSection
-          className="relative z-10 py-20 px-16 bg-black"
-          roundedTop
-        >
-          <div className="max-w-7xl mx-auto dark">
+        <ScrollSection className="relative z-10 py-20 bg-black" roundedTop>
+          <Section className="dark">
             <div className="text-center mt-8 mb-16">
               <h2 className="text-white text-4xl md:text-5xl font-bold tracking-tight mb-6">
                 Everything you need.
@@ -231,8 +228,8 @@ export default function Home() {
                 Start Creating
               </Button>
             </div> */}
-          </div>
-          <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center mt-46">
+          </Section>
+          <Section className="grid lg:grid-cols-2 gap-12 items-center mt-46">
             <div className="space-y-4 text-center flex flex-col items-center md:items-start md:text-left md:justify-baseline">
               <h2 className="text-white text-4xl md:text-5xl font-extrabold tracking-tight">
                 Your next role starts with a sharp CV.
@@ -269,16 +266,16 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
+          </Section>
         </ScrollSection>
 
         {/* FAQ */}
         <div className="w-full pt-24 bg-black">
-          <ScrollSection className="py-24 px-16 bg-background" roundedTop>
-            <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 md:gap-16">
+          <ScrollSection className="py-24 bg-background" roundedTop>
+            <Section className="grid md:grid-cols-2 gap-12 md:gap-16">
               {/* Left column: title + CTA */}
-              <div className="flex flex-col justify-start">
-                <div className="mb-10 md:mb-12">
+              <div className="flex flex-col w-full justify-center md:justify-start">
+                <div className="mb-6 text-center md:text-start">
                   <h2 className="text-black text-4xl md:text-5xl font-bold text-balance tracking-tight mb-6">
                     Frequently asked questions.
                   </h2>
@@ -287,8 +284,8 @@ export default function Home() {
                   </p>
                 </div>
 
-                <div>
-                  <Button size="lg" className="rounded-full px-8 w-fit">
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button size="lg" className="rounded-full px-8">
                     Start for free
                   </Button>
                 </div>
@@ -309,7 +306,7 @@ export default function Home() {
                   ))}
                 </Accordion>
               </div>
-            </div>
+            </Section>
 
             {/* <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-4">
