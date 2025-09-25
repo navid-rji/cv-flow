@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { Header } from "@/components/header";
 import { Section } from "@/components/section";
@@ -11,7 +13,7 @@ import {
 } from "@/components/ui/accordion";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 import { Particles } from "@/components/ui/particles";
-
+import { motion } from "framer-motion";
 import {
   Sparkles,
   Wand2,
@@ -68,9 +70,14 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header />
-      <main className="relative">
+      <motion.main
+        initial={{ opacity: 0, y: 40 }} // start faded down
+        animate={{ opacity: 1, y: 0 }} // animate to visible
+        transition={{ duration: 0.8, ease: "easeOut" }} // smooth timing
+        className="relative"
+      >
         {/* Hero Section */}
-        <Section className="relative min-h-[80vh] flex items-center pt-8">
+        <div className="relative min-h-[80vh] flex items-center pt-8">
           <Particles
             className="absolute inset-0 z-0"
             quantity={75}
@@ -80,7 +87,7 @@ export default function Home() {
             refresh
           />
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <Section className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <h1 className="text-7xl lg:text-8xl xl:text-9xl font-black text-foreground leading-[0.9] text-balance uppercase">
                 CREATE YOUR PERFECT CV
@@ -123,8 +130,8 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
-        </Section>
+          </Section>
+        </div>
         {/* Comfortable gap between hero and the next section */}
         <div className="mt-16 md:mt-24" />
 
@@ -301,7 +308,7 @@ export default function Home() {
             </Section>
           </ScrollSection>
         </div>
-      </main>
+      </motion.main>
     </div>
   );
 }
