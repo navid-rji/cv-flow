@@ -78,14 +78,20 @@ export default function Home() {
       >
         {/* Hero Section */}
         <div className="relative min-h-[80vh] flex items-center pt-8">
-          <Particles
-            className="absolute inset-0 z-0"
-            quantity={75}
-            ease={80}
-            size={0.1}
-            color={"#000000"}
-            refresh
-          />
+          <motion.div
+            initial={{ opacity: 0 }} // start faded out
+            animate={{ opacity: 1 }} // animate to visible
+            transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+          >
+            <Particles
+              className="absolute inset-0 z-0"
+              quantity={75}
+              ease={80}
+              size={0.1}
+              color={"#000000"}
+              refresh
+            />
+          </motion.div>
 
           <Section className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
