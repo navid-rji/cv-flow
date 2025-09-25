@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { Header } from "@/components/header";
 import { Section } from "@/components/section";
 import { ScrollSection } from "@/components/scroll-section";
 import { Button } from "@/components/ui/button";
