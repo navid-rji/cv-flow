@@ -1,8 +1,13 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { usePathname } from "next/navigation";
 
 export function Header() {
+  const pathname = usePathname();
+
   return (
     <header className="w-full px-6 py-4">
       <nav className="flex items-center justify-between max-w-7xl mx-auto">
@@ -42,10 +47,13 @@ export function Header() {
             About
           </a>
         </div> */}
-
-        <Button className="bg-foreground text-background hover:bg-foreground/90 rounded-full px-6">
-          Create CV
-        </Button>
+        {pathname !== "/build" && (
+          <a href="/build">
+            <Button className="bg-foreground text-background hover:bg-foreground/90 rounded-full px-6">
+              Create CV
+            </Button>
+          </a>
+        )}
       </nav>
     </header>
   );
