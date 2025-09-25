@@ -104,12 +104,14 @@ export default function Home() {
                 no paywalls, no watermarks.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-                  size="lg"
-                  className="bg-black text-white hover:bg-gray-800 rounded-full px-8"
-                >
-                  Start Creating
-                </Button>
+                <a href="/build">
+                  <Button
+                    size="lg"
+                    className="bg-black text-white hover:bg-gray-800 rounded-full px-8"
+                  >
+                    Start Creating
+                  </Button>
+                </a>
                 {/* <Button
                     variant="outline"
                     size="lg"
@@ -243,13 +245,15 @@ export default function Home() {
                 Create, refine, and export—without distractions or paywalls.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-                  variant="secondary"
-                  size="lg"
-                  className="rounded-full px-8"
-                >
-                  Create my CV now
-                </Button>
+                <a href="/build">
+                  <Button
+                    variant="secondary"
+                    size="lg"
+                    className="rounded-full px-8"
+                  >
+                    Create my CV now
+                  </Button>
+                </a>
                 {/* <Button
                   variant="outline"
                   size="lg"
@@ -290,9 +294,11 @@ export default function Home() {
                 </div>
 
                 <div className="flex max-w-sm flex-col justify-center md:flex-row md:justify-start gap-4">
-                  <Button size="lg" className="rounded-full px-8">
-                    Start for free
-                  </Button>
+                  <a href="/build">
+                    <Button size="lg" className="rounded-full px-8">
+                      Start for free
+                    </Button>
+                  </a>
                 </div>
               </div>
 
