@@ -9,7 +9,10 @@ interface SectionProps {
 export function Section({ children, className = "" }: SectionProps) {
   return (
     <section
-      className={cn("max-w-7xl mx-auto w-full px-4 md:px-16", className)}
+      className={cn(
+        "max-w-7xl mx-auto w-full px-4 md:px-16 2xl:px-0",
+        className
+      )}
     >
       {children}
     </section>

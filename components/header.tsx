@@ -10,7 +10,7 @@ export function Header() {
 
   return (
     <header className="w-full px-6 py-4">
-      <nav className="flex items-center justify-between max-w-7xl mx-auto">
+      <nav className="flex items-center justify-between mx-auto">
         <Link href="/" scroll={false}>
           <span className="text-xl font-bold text-foreground">CVflow</span>
         </Link>

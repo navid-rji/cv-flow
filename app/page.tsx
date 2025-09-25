@@ -69,7 +69,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Header />
       <motion.main
         initial={{ opacity: 0, y: 40 }} // start faded down
         animate={{ opacity: 1, y: 0 }} // animate to visible
