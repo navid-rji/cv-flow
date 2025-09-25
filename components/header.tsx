@@ -47,7 +47,7 @@ export function Header() {
             About
           </a>
         </div> */}
-        {pathname !== "/build" && (
+        {!["/build", "/preview"].includes(pathname) && (
           <a href="/build">
             <Button className="bg-foreground text-background hover:bg-foreground/90 rounded-full px-6">
               Create CV
