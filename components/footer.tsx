@@ -4,7 +4,17 @@ export function Footer() {
   return (
     <footer className="px-6 py-12 text-sm text-muted-foreground">
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p>© {new Date().getFullYear()} CVflow. Free forever.</p>
+        <div className="flex flex-row items-center gap-1">
+          <p>© {new Date().getFullYear()}</p>
+          <a
+            href="www.linkedin.com/in/navid-rajaei-a405ab251"
+            className="hover:text-blue-600"
+          >
+            Navid Rajaei
+          </a>
+        </div>
+
+        <p>CVflow. Free forever.</p>
         <div className="flex items-center gap-6">
           <a href="#" className="hover:underline">
             Privacy
